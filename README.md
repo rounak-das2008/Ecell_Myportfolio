@@ -9,3 +9,6 @@ This is my work for Ecell Task Round. Hope you would like it.
   5. Sign In and Login modal.
   6. Responsive card layouts of our Professors of 1st sem.
 
+
+*Bugs the webpage contains:
+I am still having a problem → In the Home page, the greetings and the ecell logo are colliding when viewing in smaller screen. But I am trying try to fix this problem
