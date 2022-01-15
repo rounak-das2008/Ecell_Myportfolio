@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio Website</title>
+    </head>
+    <body> 
+
+
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Rounak Das</a>
+                </div>
+
+                <!--  Timer -->
+                <p id="timer" style="font-size: 12px;"></p>
+                <script>
+                var deadline = new Date("Feb 9, 2022 23:59:59").getTime();
+                var x = setInterval(function() {
+                var now = new Date().getTime();
+                var t = deadline - now;
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                document.getElementById("timer").innerHTML = days + "d " 
+                + hours + "h " + minutes + "m " + seconds + "s ";
+                    if (t < 0) {
+                        clearInterval(x);
+                        document.getElementById("timer").innerHTML = "TimeOut";
+                    }
+                }, 1000);
+                </script>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Empresario</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Professors</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"> 
+
+    <!-- ----------------CSS For sign up modal ---------------- -->
+
+<style>
+    /*add full-width input fields*/
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+    button {
+        background-color: green;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+
+
+    .button1 {
+        background-color: green;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    .button2 {
+        background-color: red;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    /*set styles for the cancel button*/
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%
+    }
+    /*add padding to container elements*/
+    .container2 {
+        padding: 16px;
+    }
+    /*define the modal’s background*/
+     
+
+
+    /*set the forgot password text*/
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+    /*define the modal-content background*/
+     
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    /*define the close button*/
+     
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        color: #000;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    /*define the close hover and focus effects*/
+     
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+      
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+     
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+
+  @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+ <!--  -------------------------   -->
+ 
+<body>
+    <!--  -----------Signup Modal -------------- -->
+ 
+    <!-- <h2>Modal Signup Form</h2> -->
+    <!--Step 1:Adding HTML-->
+    <button class= "button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 10%;">Sign Up</button>
+ 
+ 
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="container2">
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+ 
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+                <label><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <input type="checkbox"> Remember me
+                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+ 
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button  type="submit" class="signupbtn">Sign Up</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+      <script>
+        var modal = document.getElementById('id01');
+ 
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+    <!-- ------------Log In Modal------------- -->
+    <button class="button1" onclick="document.getElementById('id02').style.display='block'" style="width:auto; border-radius: 10%; background-color: red;">Login</button>
+  
+    <div id="id02" class="modal"> 
+        
+  
+         <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span> 
+                
+  
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+  
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+  
+                <button type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+            </div>
+  
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form> 
+    </div>
+  
+    <script>
+        var modal = document.getElementById('id02');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+ 
+    <!--close the modal by just clicking outside of the modal-->
+
+<!-- ----------------------------------------- -->
+            </li>
+
+
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+
+
+
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>Hi</span><br>Janta</h1>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
+                    </div>
+
+                    <img src="assets/img/ecell_white.png" alt="" class="home__img">
+                </div>
+            </section>
+            
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/perfil.png" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">I'am Rounak Das</h2>
+                        <span class="about__profession">Student</span>
+                        <p class="about__text">I am a first year UG student of Civil Engineering Department at IIT Kharagpur. I am from Kolkata, West Bengal and I did my schooling from Kendriya Vidyalaya Ballygunge. I am very honoured to present my work as a portfolio website to Entrepreneurship Cell, IIT Kharagpur </p>
+
+                        <div class="about__social">
+                            <!-- <a href="#" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a> -->
+                            <a href="https://github.com/rounak-das2008" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== Accordian Empresario =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Empresario</h2>
+
+
+                <style>
+                  
+                    /* style to set body of page */
+                    body {
+                        width:100%; 
+                        margin:auto;
+                    }
+                    .gallery {
+                        width:100%;
+                        display:flex;
+                        flex-flow: row wrap;
+                    }
+                    .box {
+                        flex-basis:20%;
+                        width:100%;
+                        padding:10px;
+                        margin:8px;
+                        /*box-shadow: 1px 1px 1px 1px green;*/
+                    }
+                    .text {
+                        text-align:center;
+                        margin-top:5px;
+                    }
+                    .image:hover {
+                        border: 3px solid green;
+                    }
+                      
+                    /* media query used here */
+                    @media only screen and (max-width: 400px) { 
+                        .box {
+                            flex-basis: 100%;
+                        }
+                    }
+                      
+                    @media only screen and (max-width: 500px) {
+                        .box {
+                            flex-basis: 40%;
+                        }
+                    }
+                </style>
+
+  
+                    <div class = "gallery">
+                        <div class = "box">
+                            <div class = "image">
+                                <a target="_blank" href=
+                "assets/img/ecell1.jpeg">
+                                    <img src =
+                "assets/img/ecell1.jpeg" 
+                                width = "300" height = "300">
+                                </a>
+                            </div>
+                              
+                            <div class = "text">
+                                E-Adda
+                            </div>
+                        </div>
+                      
+                        <div class = "box">
+                            <div class = "image">
+                                <a target="_blank" href=
+                "assets/img/ecell2.jpeg">
+                                    <img src =
+                "assets/img/ecell2.jpeg"
+                                width = "300" height = "300">
+                                </a>
+                            </div>
+                              
+                            <div class = "text">
+                                Innovation and Startups
+                            </div>
+                        </div>
+                          
+                        <div class = "box">
+                            <div class = "image">
+                                <a target="_blank" href=
+                "assets/img/ecell3.jpeg">
+                                    <img src = 
+                "assets/img/ecell3.jpeg" 
+                                width = "300" height = "300">
+                                </a>
+                            </div>
+                              
+                            <div class = "text">
+                                Ecell Introductory Seminar
+                            </div>
+                        </div>
+
+                        <div class = "box">
+                            <div class = "image">
+                                <a target="_blank" href=
+                "assets/img/ecell4.jpeg">
+                                    <img src = 
+                "assets/img/ecell4.jpeg" 
+                                width = "300" height = "300">
+                                </a>
+                            </div>
+                              
+                            <div class = "text">
+                                EAD Kolkata
+                            </div>
+                        </div>
+                      
+
+
+
+                <style >
+                    .accordion {
+                      background-color: #eee;
+                      color: #444;
+                      cursor: pointer;
+                      padding: 18px;
+                      width: 100%;
+                      text-align: left;
+                      border: none;
+                      outline: none;
+                      transition: 0.4s;
+                      /*border: 100px;*/
+                    }
+                    .accordion:after {
+                      content: '\02795'; /* Unicode character for "plus" sign (+) */
+                      font-size: 13px;
+                      color: #777;
+                      float: right;
+                      margin-left: 5px;
+                    }
+
+                    .active1:after {
+                      content: "\2796"; /* Unicode character for "minus" sign (-) */
+                    }
+
+                    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+                    .active1, .accordion:hover {
+                      background-color: #ccc;
+                    }
+
+                    /* Style the accordion panel. Note: hidden by default */
+                    .panel {
+                      padding: 0 18px;
+                      background-color: white;
+                      display: none;
+                      overflow: hidden;
+                    }
+
+                </style>
+
+                <button class="accordion">1.Is there any registration fee for Empresario?</button>
+                <div class="panel">
+                    <p></p>
+                </div>
+                </div>
+
+                <button class="accordion">2.Who can participate in Empresario?</button>
+                <div class="panel">
+                <p>Answer: There is no restriction on any individual to partcipate. Anyone, from students to working professionals across the world with an idea, a product or service or even an operating startup, can partcipate.</p>
+                </div>
+
+                <button class="accordion">3.Can a team enter under both categories Social as well as Products and Services track?</button>
+                <div class="panel">
+                  <p>Answer: No, you can't enter both categories with the same B-model. But, you can always apply for the other track with a different B-model.</p>
+                </div>
+
+                <button class="accordion">4.What should one do if he/she has two different B-models?</button>
+                <div class="panel">
+                  <p></p>
+                </div>
+                <button class="accordion">5.How is the confidentiality of the B-model maintained?</button>
+                <div class="panel">
+                    <p> </p>
+                </div>
+                
+                </div>
+
+                <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+
+                    for (i = 0; i < acc.length; i++) {
+                      acc[i].addEventListener("click", function() {
+                        /* Toggle between adding and removing the "active" class,
+                        to highlight the button that controls the panel */
+                        this.classList.toggle("active1");
+
+                        /* Toggle between hiding and showing the active panel */
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                          panel.style.display = "none";
+                        } else {
+                          panel.style.display = "block";
+                        }
+                      });
+                    }
+                </script>
+
+                    <!-- Cancelled Skill, stacked registration, and MCQ tasks -->
+               <!--  <div class="skills__container bd-grid">
+                    <div class="skills__box">
+
+                </div> -->
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Professors</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_amukherjee.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Anirban Mukherjee 
+                            <br>Associate Professor
+                            <br>Electrical Engineering
+                            <br>
+
+                            <br>Contact
+                            <br >anirban@ee.iitkgp.ac.in
+                            <br >+91-3222-283050
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_cnahak.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Chandal Nahak
+                                <br>Professor 
+                                <br>Mathematics
+                                <br>
+                                <br>Contact
+                                <br>cnahak@maths.iitkgp.ac.in
+                                <br>+91-3222-283682
+                            </a>                        
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_skarmakar.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Srinibas Karmakar 
+                            <br>Associate Professor
+                            <br>Aerospace Engineering
+                            <br>
+                            <br> Contact
+                            <br>skarmakar@aero.iitkgp.ac.in
+                            <br>+91-3222-283012
+                </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_sudhagoel.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Sudha Goel 
+                                <br>Associate Professor 
+                                <br>Civil Engineering
+                                <br>
+                                <br>Contact
+                                <br>sudhagoel@civil.iitkgp.ac.in
+                                <br>+91-3222-283436
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_saha.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Sandeep Saha
+                                <br>Assistant Professor Grade-I
+                                <br>Aerospace Engineering
+                                <br>
+                                <br>Contact
+                                <br>ssaha@aero.iitkgp.ac.in 
+                                <br>+91-3222-282854
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/profs/prof_psburada.png" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">Poornachandra Sekhar Burada 
+                                <br>Associate Professor 
+                                <br>Physics
+                                <br>
+                                <br>Contact   
+                                <br>psburada@phy.iitkgp.ac.in
+                                <br>+91-3222-283816</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">rounakdas200813@gmail.com</span>
+
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text">+919330341418</span>
+
+                        <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">Kolkata, West Bengal India</span>
+                    </div>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="mail" placeholder="Email" class="contact__input">
+                        </div>
+
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                        <input type="submit" value="Send" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Rounak Das</h2>
+                    <p class="footer__text">I'm Rounak Das and this is my personal website</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About Me</a></li>
+                        <li><a href="#skills" class="footer__link">Empresario</a></li>
+                        <li><a href="#portfolio" class="footer__link">Professors</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">Social Media Accounts</h2>
+                    <a href="https://www.facebook.com/profile.php?id=100075484467779" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.instagram.com/_rounak__das_/" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <!-- <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a> -->
+                </div>
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
