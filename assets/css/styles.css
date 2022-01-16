@@ -141,7 +141,7 @@ img{
         width: 80%;
         height: 100%;
         padding: 2rem;
-        background-color: rgba(255,255,255,.3);
+        background-color: rgba(106, 90, 205, .5);         /*rgba(255,255,255,.3);    changed from light grey to light violet*/    
         transition: .5s;
         backdrop-filter: blur(10px);
     }
@@ -151,7 +151,8 @@ img{
 }
 .nav__link{
     position: relative;
-    color: var(--dark-color);
+    color: #696969; /*var(--dark-color);*/       /* changed to - dark grey color  and added font-weight */
+    font-weight: bold;
 }
 .nav__link:hover{
     color: var(--first-color);
@@ -204,7 +205,7 @@ img{
     text-shadow: 0 20px 25px rgba(0,0,0,.5);
 }
 .home__scroll{
-    margin-top: -100px;     // added for scroll down text to shift upwards
+    margin-top: -100px;     /* added for scroll down text to shift upwards */
     align-self: flex-end;
     padding-bottom: var(--mb-4);
 }
