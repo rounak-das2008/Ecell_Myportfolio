@@ -192,6 +192,9 @@ img{
     row-gap: 5rem;
 }
 .home__title{
+    text-align: right;
+    /*display: inline;*/
+    margin-top: -250px;
     align-self: flex-end;
     font-size: var(--big-font-size);
     color: var(--white-color);
@@ -210,10 +213,14 @@ img{
     color: var(--white-color);
 }
 .home__img{
-    position: absolute;
+    /*position: absolute;*/
+    align: left;
     right: 0;
     bottom: 0;
-    width: 295px;
+    /*margin-left: 400px;*/
+    /*width: 295px;*/
+    padding: 90px;
+
 }
 
 /* ===== ABOUT =====*/
