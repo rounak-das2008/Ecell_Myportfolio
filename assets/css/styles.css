@@ -204,6 +204,7 @@ img{
     text-shadow: 0 20px 25px rgba(0,0,0,.5);
 }
 .home__scroll{
+    margin-top: -100px;     // added for scroll down text to shift upwards
     align-self: flex-end;
     padding-bottom: var(--mb-4);
 }
