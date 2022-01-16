@@ -11,4 +11,5 @@ This is my work for Ecell Task Round. Hope you would like it.
 
 
 *Bugs the webpage contains:
-I am still having a problem → In the Home page, the greetings and the ecell logo are colliding when viewing in smaller screen. But I am trying try to fix this problem
+I am still having a problem → In the Home page, the sign up and login buttons showing a glitch when screen size is smaller (i.e a size in between laptop screen size and mobile screen size). But I am trying try to fix this problem.
+*
